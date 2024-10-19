@@ -10,6 +10,7 @@ function App() {
       if (book.id === id) {
         return { ...book, title: newTitle };
       }
+
       return book;
     });
 
@@ -20,6 +21,7 @@ function App() {
     const updatedBooks = books.filter((book) => {
       return book.id !== id;
     });
+
     setBooks(updatedBooks);
   };
 
@@ -36,6 +38,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>Reading List</h1>
       <BookList onEdit={editBookById} books={books} onDelete={deleteBookById} />
       <BookCreate onCreate={createBook} />
     </div>

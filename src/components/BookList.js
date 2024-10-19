@@ -6,6 +6,7 @@ function BookList({ books, onDelete, onEdit }) {
       <BookShow onEdit={onEdit} onDelete={onDelete} key={book.id} book={book} />
     );
   });
+
   return <div className="book-list">{renderedBooks}</div>;
 }
 
